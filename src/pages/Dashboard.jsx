@@ -14,6 +14,7 @@ import {
   where,
 } from 'firebase/firestore'
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { AIInsights } from '../components/AIInsights.jsx'
 import { auth, db } from '../firebase'
 import { setTransactions } from '../store/ledgerSlice'
 
@@ -259,16 +260,11 @@ export function Dashboard() {
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
               Balance based on your current ledger.
             </p>
-            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm dark:border-zinc-800 dark:bg-zinc-900/40">
-              <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">
-                Balance: {balance}
-              </p>
-              <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-                {balance < 0
-                  ? 'AI Tip: Your debt is high. Consider reducing discretionary spending.'
-                  : 'AI Tip: Great job! You have a surplus. Consider investing 10%.'}
-              </p>
-            </div>
+            <AIInsights
+              totalIncome={totalIncome}
+              totalDebt={totalDebt}
+              balance={balance}
+            />
           </div>
         </div>
       </section>
