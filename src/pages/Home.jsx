@@ -17,12 +17,12 @@ export function Home() {
             Portfolio starter
           </p>
           <h1 className="text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            Hi, I’m Hamza. I build simple, modern web apps.
+            Hi, I’m Hamza. I design clear, friendly web experiences.
           </h1>
           <p id="about" className="text-pretty text-sm leading-6 text-zinc-600 dark:text-zinc-300">
-            This is a clean starting layout: a responsive navbar, a sidebar, and a
-            home page with hero, contact, and blog sections. Swap the content
-            anytime.
+            I focus on fast, minimal interfaces that feel approachable. This
+            starter page pairs a simple hero, biography, contact section, and
+            blog layout so you can plug in your own story.
           </p>
           <div className="flex flex-wrap gap-2">
             <a

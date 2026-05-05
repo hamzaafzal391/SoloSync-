@@ -1,15 +1,13 @@
-I have enabled Firestore and my .env is ready. Let's build the Dashboard functionality for Step 3.
+"Step 3 is successful. Let's finish the project with Step 4.
 
-Data Logic: In the Dashboard, create a form to add a transaction: Title, Amount (as a number), and Type (Income or Debt). Save these to a Firestore collection called 'transactions'.
+Analytics Dashboard: In the Dashboard, add a section above the table using recharts. Create a Bar Chart that compares 'Total Income' vs 'Total Debt' based on the data in the Redux store.
 
-UI Components:
+AI Recommendation System: Create a simple 'AI Insights' component. It should calculate the balance (Income minus Debt). If the balance is negative, show: 'AI Tip: Your debt is high. Consider reducing discretionary spending.' If positive, show: 'AI Tip: Great job! You have a surplus. Consider investing 10%.'
 
-Create a Table to display all transactions fetched from Firestore.
+PDF Generation: Add a 'Download Statement' button. Use the jspdf library to generate a simple PDF that lists all the transactions currently in the table.
 
-Add a Delete button for each row and an Edit function (CRUD).
+User Notifications: Ensure react-hot-toast triggers a notification whenever a transaction is added, edited, or deleted.
 
-Add a Search Bar above the table that filters the list by title as I type.
+Clean Up: Make sure the 'Photos and Biography' on the Landing page looks professional with a placeholder image. Ensure the 'Search Bar' is functioning across the table.
 
-Sync: Ensure the Redux store stays updated when data changes.
-
-Human Code: Use simple logic, Tailwind for styling, and strictly no comments. Use react-hot-toast for success/error notifications."
+Human Style: Keep the code simple, use Tailwind for a 'Friendly UI', and strictly no comments in any file."
