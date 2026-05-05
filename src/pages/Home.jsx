@@ -85,47 +85,47 @@ export function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-3">
-        <div className="min-h-[168px] rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
+      <section className="mx-auto grid max-w-5xl items-stretch gap-6 md:grid-cols-3">
+        <div className="flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
           <div className="flex items-center gap-2 text-sm font-semibold text-zinc-900 dark:text-zinc-50">
             <Users className="h-4 w-4" />
             Directory + profiles
           </div>
-          <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+          <p className="mt-2 flex-1 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
             Guests can explore People and open a portfolio page with projects and blog content.
           </p>
         </div>
-        <div className="min-h-[168px] rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
           <div className="flex items-center gap-2 text-sm font-semibold text-zinc-900 dark:text-zinc-50">
             <ShieldCheck className="h-4 w-4" />
             Clean auth
           </div>
-          <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+          <p className="mt-2 flex-1 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
             Profiles are editable for logged-in users. Dashboard stays private behind login.
           </p>
         </div>
-        <div className="min-h-[168px] rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
           <div className="flex items-center gap-2 text-sm font-semibold text-zinc-900 dark:text-zinc-50">
             <Wand2 className="h-4 w-4" />
             Insights on demand
           </div>
-          <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
+          <p className="mt-2 flex-1 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
             Generate insights only when you click, so you don’t waste API quota.
           </p>
         </div>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-2">
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+      <section className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
+        <div className="flex min-h-[420px] flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <div className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/30">
             <img
               src={fintechLedgerImg}
               alt="Finance dashboard preview"
-              className="h-56 w-full object-cover"
+              className="h-72 w-full object-cover"
               loading="lazy"
             />
           </div>
-          <div className="space-y-2 p-5">
+          <div className="flex flex-1 flex-col justify-between gap-3 p-6">
             <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
               Finance dashboard
             </p>
@@ -135,22 +135,22 @@ export function Home() {
             </p>
           </div>
         </div>
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="flex min-h-[420px] flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
           <div className="grid grid-cols-2 gap-0 border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/30">
             <img
               src={aiDoctorImg}
               alt="Project preview"
-              className="h-56 w-full object-cover"
+              className="h-72 w-full object-cover"
               loading="lazy"
             />
             <img
               src={legalAssistantImg}
               alt="Project preview"
-              className="h-56 w-full object-cover"
+              className="h-72 w-full object-cover"
               loading="lazy"
             />
           </div>
-          <div className="space-y-2 p-5">
+          <div className="flex flex-1 flex-col justify-between gap-3 p-6">
             <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
               Portfolio that shows your work
             </p>

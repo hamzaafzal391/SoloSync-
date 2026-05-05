@@ -5,7 +5,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="px-4 py-10 md:px-6">
+      <div className="px-4 py-8 md:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
@@ -74,9 +74,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-zinc-200 pt-6 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 flex flex-col gap-2 border-t border-zinc-200 pt-4 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} SoloSync. All rights reserved.</p>
-          <p className="text-zinc-500 dark:text-zinc-400">Built with Tailwind + Firebase.</p>
         </div>
       </div>
     </footer>

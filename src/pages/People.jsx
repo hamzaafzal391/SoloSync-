@@ -69,37 +69,37 @@ export function People() {
           No profiles found.
         </div>
       ) : (
-        <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {filtered.map((p) => (
             <Link
               key={p.uid}
               to={`/u/${p.uid}`}
-              className="flex min-h-[320px] flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-900/40"
+              className="flex min-h-[380px] flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-900/40"
             >
               <div className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/30">
                 {p.heroImageUrl ? (
                   <img
                     src={p.heroImageUrl}
                     alt={p.displayName || 'Profile'}
-                    className="h-44 w-full object-cover"
+                    className="h-56 w-full object-cover"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none'
                     }}
                   />
                 ) : (
-                  <div className="flex h-44 items-center justify-center text-xs text-zinc-500 dark:text-zinc-400">
+                  <div className="flex h-56 items-center justify-center text-xs text-zinc-500 dark:text-zinc-400">
                     No image
                   </div>
                 )}
               </div>
-              <div className="flex flex-1 flex-col justify-between gap-4 p-6">
+              <div className="flex flex-1 flex-col justify-between gap-5 p-7">
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold text-zinc-900 dark:text-zinc-50">
+                    <p className="truncate text-base font-semibold text-zinc-900 dark:text-zinc-50">
                       {p.displayName || 'Unnamed'}
                     </p>
-                    <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-300">
+                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-zinc-600 dark:text-zinc-300">
                       {p.headline || p.intro || p.bio || 'No overview yet.'}
                     </p>
                   </div>
