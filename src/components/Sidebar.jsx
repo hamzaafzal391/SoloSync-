@@ -1,9 +1,10 @@
-import { FileText, Home, LayoutDashboard, Mail, User } from 'lucide-react'
+import { FileText, FolderKanban, Home, LayoutDashboard, Mail, User } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const items = [
   { to: '/', label: 'Home', icon: Home },
   { to: '/#about', label: 'About', icon: User },
+  { to: '/#projects', label: 'Projects', icon: FolderKanban },
   { to: '/#contact', label: 'Contact', icon: Mail },
   { to: '/#blog', label: 'Blog', icon: FileText },
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },

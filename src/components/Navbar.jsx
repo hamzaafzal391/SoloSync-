@@ -32,6 +32,12 @@ export function Navbar({ onMenuClick }) {
             Contact
           </Link>
           <Link
+            to="/#projects"
+            className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
+          >
+            Projects
+          </Link>
+          <Link
             to="/#blog"
             className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
           >
