@@ -10,12 +10,13 @@ const ledgerSlice = createSlice({
       reducer(state, action) {
         state.transactions.push(action.payload)
       },
-      prepare({ label, amount, date }) {
+      prepare({ title, amount, type, date }) {
         return {
           payload: {
             id: nanoid(),
-            label: label ?? '',
+            title: title ?? '',
             amount: Number(amount) || 0,
+            type: type ?? 'Income',
             date: date ?? new Date().toISOString().slice(0, 10),
           },
         }
@@ -29,9 +30,21 @@ const ledgerSlice = createSlice({
         (t) => t.id !== action.payload,
       )
     },
+    updateTransaction(state, action) {
+      const { id, title, amount, type } = action.payload
+      const tx = state.transactions.find((t) => t.id === id)
+      if (!tx) return
+      tx.title = title
+      tx.amount = amount
+      tx.type = type
+    },
   },
 })
 
-export const { addTransaction, setTransactions, removeTransaction } =
-  ledgerSlice.actions
+export const {
+  addTransaction,
+  setTransactions,
+  removeTransaction,
+  updateTransaction,
+} = ledgerSlice.actions
 export default ledgerSlice.reducer
