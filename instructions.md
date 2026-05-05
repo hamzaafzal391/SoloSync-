@@ -1,15 +1,15 @@
-Let's start Step 1. Create a basic layout with a responsive Navbar and Sidebar.
+I have enabled Firestore and my .env is ready. Let's build the Dashboard functionality for Step 3.
 
-Create a Home page that includes:
+Data Logic: In the Dashboard, create a form to add a transaction: Title, Amount (as a number), and Type (Income or Debt). Save these to a Firestore collection called 'transactions'.
 
-A Hero section with a placeholder image and a biography section.
+UI Components:
 
-A 'Contact' section with social media icons and a Google Maps iframe.
+Create a Table to display all transactions fetched from Firestore.
 
-A 'Blog' section with a simple list of cards showing dummy titles and dates.
+Add a Delete button for each row and an Edit function (CRUD).
 
-Ensure the layout is mobile-responsive using Tailwind.
+Add a Search Bar above the table that filters the list by title as I type.
 
-Use lucide-react for the icons.
+Sync: Ensure the Redux store stays updated when data changes.
 
-No comments in the code. Keep it very simple and direct."
+Human Code: Use simple logic, Tailwind for styling, and strictly no comments. Use react-hot-toast for success/error notifications."

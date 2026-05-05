@@ -1,10 +1,12 @@
-import { FileText, Home, Mail, User } from 'lucide-react'
+import { FileText, Home, LayoutDashboard, Mail, User } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const items = [
-  { href: '#', label: 'Home', icon: Home },
-  { href: '#about', label: 'About', icon: User },
-  { href: '#contact', label: 'Contact', icon: Mail },
-  { href: '#blog', label: 'Blog', icon: FileText },
+  { to: '/', label: 'Home', icon: Home },
+  { to: '/#about', label: 'About', icon: User },
+  { to: '/#contact', label: 'Contact', icon: Mail },
+  { to: '/#blog', label: 'Blog', icon: FileText },
+  { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
 ]
 
 export function Sidebar({ open, onClose }) {
@@ -35,15 +37,15 @@ export function Sidebar({ open, onClose }) {
           {items.map((it) => {
             const Icon = it.icon
             return (
-              <a
+              <Link
                 key={it.label}
-                href={it.href}
+                to={it.to}
                 onClick={onClose}
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100 dark:text-zinc-200 dark:hover:bg-zinc-900"
               >
                 <Icon className="h-4 w-4" />
                 <span>{it.label}</span>
-              </a>
+              </Link>
             )
           })}
         </nav>
