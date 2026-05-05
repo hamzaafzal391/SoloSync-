@@ -9,7 +9,7 @@ export function Navbar({ onMenuClick }) {
 
   return (
     <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/80">
-      <div className="mx-auto flex h-14 max-w-6xl items-center gap-3 px-4">
+      <div className="flex h-14 items-center gap-2 px-3 sm:gap-3 sm:px-4">
         <button
           type="button"
           onClick={onMenuClick}
@@ -21,59 +21,58 @@ export function Navbar({ onMenuClick }) {
         <Link to="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-indigo-500 to-fuchsia-500" />
           <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-            WebProjFinal
+            SoloSync
           </span>
         </Link>
-        <div className="ml-auto flex flex-wrap items-center justify-end gap-1 text-sm text-zinc-600 dark:text-zinc-300 sm:gap-2">
-          <Link
-            to="/#contact"
-            className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
-          >
-            Contact
-          </Link>
-          <Link
-            to="/#projects"
-            className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
-          >
-            Projects
-          </Link>
-          <Link
-            to="/#blog"
-            className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
-          >
-            Blog
-          </Link>
+        <div className="ml-auto flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-300">
+          <div className="hidden items-center gap-1 md:flex">
+            <Link
+              to="/people"
+              className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
+            >
+              People
+            </Link>
+            {user ? (
+              <>
+                <Link
+                  to="/me"
+                  className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
+                >
+                  My profile
+                </Link>
+                <Link
+                  to="/dashboard"
+                  className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
+                >
+                  Dashboard
+                </Link>
+              </>
+            ) : null}
+          </div>
+
           {user ? (
-            <>
-              <Link
-                to="/dashboard"
-                className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
-              >
-                Dashboard
-              </Link>
-              <button
-                type="button"
-                onClick={() => signOut(auth)}
-                className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
-              >
-                Sign out
-              </button>
-            </>
+            <button
+              type="button"
+              onClick={() => signOut(auth)}
+              className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-xs font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:hover:bg-zinc-900 sm:text-sm"
+            >
+              Sign out
+            </button>
           ) : (
-            <>
+            <div className="flex items-center gap-1">
               <Link
                 to="/login"
-                className="rounded-lg px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-900"
+                className="rounded-lg border border-zinc-200 bg-white px-3 py-2 text-xs font-semibold text-zinc-900 hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:hover:bg-zinc-900 sm:text-sm"
               >
                 Log in
               </Link>
               <Link
                 to="/signup"
-                className="rounded-lg bg-zinc-900 px-3 py-2 font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
+                className="rounded-lg bg-zinc-900 px-3 py-2 text-xs font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200 sm:text-sm"
               >
                 Sign up
               </Link>
-            </>
+            </div>
           )}
         </div>
       </div>

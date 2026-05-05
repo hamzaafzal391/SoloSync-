@@ -1,12 +1,10 @@
-import { FileText, FolderKanban, Home, LayoutDashboard, Mail, User } from 'lucide-react'
+import { Home, LayoutDashboard, Users, UserRoundCog } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const items = [
   { to: '/', label: 'Home', icon: Home },
-  { to: '/#about', label: 'About', icon: User },
-  { to: '/#projects', label: 'Projects', icon: FolderKanban },
-  { to: '/#contact', label: 'Contact', icon: Mail },
-  { to: '/#blog', label: 'Blog', icon: FileText },
+  { to: '/people', label: 'People', icon: Users },
+  { to: '/me', label: 'My profile', icon: UserRoundCog },
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
 ]
 
@@ -22,8 +20,8 @@ export function Sidebar({ open, onClose }) {
       />
       <aside
         className={[
-          'fixed left-0 top-0 z-50 h-dvh w-72 border-r border-zinc-200 bg-white p-4 transition-transform dark:border-zinc-800 dark:bg-zinc-950 md:sticky md:z-0 md:h-[calc(100dvh-3.5rem)] md:translate-x-0 md:border-r md:top-14',
-          open ? 'translate-x-0' : '-translate-x-full md:translate-x-0',
+          'fixed left-0 top-0 z-50 h-dvh w-72 border-r border-zinc-200 bg-white p-4 transition-transform dark:border-zinc-800 dark:bg-zinc-950 md:hidden',
+          open ? 'translate-x-0' : '-translate-x-full',
         ].join(' ')}
         aria-label="Sidebar"
       >
@@ -50,10 +48,6 @@ export function Sidebar({ open, onClose }) {
             )
           })}
         </nav>
-
-        <div className="mt-6 rounded-xl border border-zinc-200 bg-zinc-50 p-3 text-sm text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900/30 dark:text-zinc-300">
-          Simple responsive layout with Tailwind.
-        </div>
       </aside>
     </>
   )
